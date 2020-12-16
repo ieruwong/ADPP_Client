@@ -1,0 +1,14 @@
+<view class="header">
+  <view class="container hdCon">
+    <!--open-type="switchTab" 实现跳转-->
+    <navigator open-type="switchTab" url="/pages/user/user" class="logo">
+      <!--heightFix	缩放模式，高度不变，宽度自动变化，保持原图宽高比不变 -->
+      <image mode="heightFix" src="{{userimg}}" class="images"></image>
+    </navigator>
+
+    <view class="search" bindtap="toSearch">
+      <button class="btn"></button>
+      <image mode="heightFix" src="/images/search.png" class="images"></image>
+    </view>
+  </view>
+</view>

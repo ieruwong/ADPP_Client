@@ -1,0 +1,128 @@
+
+/******************************轮播图******************************/
+.banner{
+  width: 100%;
+  height: 350rpx;/*轮播图区域高度*/
+}
+.banner swiper{
+  width: 100%;
+  height: 100%;
+}
+.banner image{
+  width: 100%;
+  height: 100%;
+}
+/******************************签到******************************/
+
+.daily{
+  white-space: nowrap;
+  padding: 0 0;
+}
+.daily .box{
+  margin-top: 20rpx;
+  text-align: center;
+  width: 170rpx;
+  display: inline-block;
+}
+.daily .pic{
+  width: 100rpx;
+  height: 100rpx;
+}
+.daily .text{
+  font-size: 26rpx;
+  margin-top: 5rpx;
+}
+/******************************health区公共样式******************************/
+.pubTitle{
+  display: flex;
+  justify-content: space-between;
+  height: 60rpx;
+  align-items: center;
+  margin-bottom: 40rpx;
+}
+.pubTitle .text{
+  font-size: 40rpx;
+  height: 100%;
+  position: relative;
+  padding-left: 20rpx;
+}
+.pubTitle .text::before{
+  display: block;
+  width: 10rpx;
+  height: 40rpx;
+  background-color: red;
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 40%;
+  margin-top: -15rpx;
+}
+.pubTitle .more{
+  font-size: 32rpx;
+  color:#666;
+}
+/******************************模块A******************************/
+.exercise{
+  background: #f0f3f8; 
+  padding:40rpx 0 80rpx ;
+}
+.body{
+  display: flex;
+  flex-wrap: wrap ;
+  justify-content: center;
+  border-radius:50%;
+}
+.body .box{
+  width: 85%;
+  height: 300rpx;
+  margin-bottom: 30rpx;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+.body .pic{
+  width: 100%;
+  height:100%;
+  border-radius:50rpx;
+}
+.body .top{
+   width: 100%;
+   height: 100%;
+   background: rgb(0, 0, 0,0);
+   position: absolute;
+   top: 0;
+   left: 0;
+   color: white;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   padding:0 20rpx;
+   box-sizing: border-box;
+   text-align: center;
+}
+.body .top .title{
+  font-size: 34rpx;
+}
+.body .top .line{
+  width: 50rpx;
+  height: 2rpx;
+  background: #fff;
+  margin: 10rpx 0 20rpx;
+}
+.body .top .dec{
+  opacity: 0.6;
+  text-transform: uppercase;
+  font-size: 26rpx;
+  letter-spacing:5rpx;
+}
+/******************************模块B******************************/
+.diet{
+  background: #fff; 
+  padding:40rpx 0 80rpx ;
+}
+/******************************模块C******************************/
+.sleep{
+  background: #f0f3f8; 
+  padding:40rpx 0 80rpx ;
+}

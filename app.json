@@ -1,0 +1,42 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/learn/learn",
+    "pages/user/user",
+    "pages/search/search",
+    "pages/infoEntry/infoEntry"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#2EC5B6",
+    "navigationBarTitleText": "阿尔茨海默预防",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "color": "#000000",
+    "selectedColor": "#2EC5B6",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "主页",
+        "iconPath": "/images/home.png",
+        "selectedIconPath": "/images/home-s.png"
+      },
+      {
+        "pagePath": "pages/learn/learn",
+        "text": "知识",
+        "iconPath": "/images/learn.png",
+        "selectedIconPath": "/images/learn-s.png"
+      },
+      {
+        "pagePath": "pages/user/user",
+        "text": "我的",
+        "iconPath": "/images/user.png",
+        "selectedIconPath": "/images/user-s.png"
+      }
+    ]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

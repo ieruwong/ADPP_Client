@@ -1,0 +1,85 @@
+<PageHeader/>
+
+<view class="banner">
+      <!--circular:无缝衔；     autoplay：自动轮播；      interval：设置间隔 -->
+  <swiper indicator-dots indicator-color="rgeb(255,255,255,0.5)" indicator-active-color="#fff" circular autoplay interval="4000">
+    <swiper-item><image src="/images/swiper/banner1.jpg" bindtap="bindViewTapA"/></swiper-item>
+    <swiper-item><image src="/images/swiper/banner1.jpg" bindtap="bindViewTapB"/></swiper-item>
+    <swiper-item><image src="/images/swiper/banner1.jpg" bindtap="bindViewTapB"/></swiper-item>
+  </swiper>
+</view>
+
+<scroll-view class="daily" scroll-x>
+  
+  <DailyBox class="box" boxtext="早睡" imgsrc="/images/daily/zaoshui.png"/>
+  <DailyBox class="box" boxtext="早起" imgsrc="/images/daily/zaoqi.png"/>
+  <DailyBox class="box" boxtext="健康饮食" imgsrc="/images/daily/jiankyinshi.png"/>
+  <DailyBox class="box" boxtext="锻炼" imgsrc="/images/daily/duanlian.png"/>
+  <DailyBox class="box" boxtext="学习" imgsrc="/images/daily/xuexi.png"/>
+
+</scroll-view>
+
+<view class="exercise">
+  <view class="container">
+
+    <view class="pubTitle">
+      <view class="text">运动</view>
+      <navigator class="more">详情>>></navigator>
+    </view>
+    
+    <view class="body">
+    
+      <navigator class="box">
+        
+        <image class="pic" src="/images/health/health1.jpg"/>
+        <view class="top">
+          <view class="title">运动记录</view>
+          <view class="line"></view>
+          <view class="dec">function A</view>
+        </view>
+      </navigator>
+
+    </view>
+
+  </view> 
+</view>
+
+<view class="diet">
+  <view class="container">
+    <view class="pubTitle">
+      <view class="text">饮食</view>
+      <navigator class="more">详情>>></navigator>
+    </view>
+    <view class="body">
+      <navigator class="box">
+        <image class="pic" src="/images/health/health1.jpg"/>
+        <view class="top">
+          <view class="title">饮食推荐</view>
+          <view class="line"></view>
+          <view class="dec">function B</view>
+        </view>
+      </navigator>
+    </view>
+
+  </view>
+</view>
+
+<view class="sleep">
+  <view class="container">
+    <view class="pubTitle">
+      <view class="text">睡眠</view>
+      <navigator class="more">详情>>></navigator>
+    </view>
+    <view class="body">
+      <navigator class="box">
+        <image class="pic" src="/images/health/health1.jpg"/>
+        <view class="top">
+          <view class="title">睡眠监测</view>
+          <view class="line"></view>
+          <view class="dec">function C</view>
+        </view>
+      </navigator>
+    </view>
+
+  </view>
+</view>

@@ -1,0 +1,28 @@
+<Tabs tabs="{{tabs}}" binditemChange="handleItemChange">
+
+  <!-- 阅读 -->
+  <block wx:if="{{tabs[0].isActive}}">
+    <view class="read">
+      <navigator class="book" wx:for="{{8}}" wx:key="key">
+        <view class="pic"><image mode="widthFix" src="/images/books/book0.png"></image></view>
+        <view class="txt">
+          <view class="title">《ADC阿尔茨海默症防治指导手册》</view>
+          <view class="newsinfo"><text space="ensp">来源：ADC - 时间：2020-08-17</text></view>
+        </view>
+      </navigator>
+    </view>
+  </block>
+  <!-- 新闻 -->
+  <block wx:else="{{tabs[1].isActive}}">
+    <view class="read">
+      <navigator class="book" wx:for="{{8}}" wx:key="key">
+        <view class="pic"><image mode="widthFix" src="/images/news/file.png"></image></view>
+        <view class="txt">
+          <view class="title">《从容面对 不再回避》2020世界阿尔茨海默病月主题发布</view>
+          <view class="newsinfo"><text space="ensp">来源：ADC - 时间：2020-01-13</text></view>
+        </view>
+      </navigator>
+    </view>
+  </block>
+
+</Tabs>

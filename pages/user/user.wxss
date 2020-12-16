@@ -1,0 +1,97 @@
+page {
+  background-color: #f0f3f8;
+}
+.uxer_info_wrap {
+  height: 45vh;
+  overflow: hidden;
+  background-color: var(--themeColor);
+}
+.uxer_info_wrap .user_img_wrap .user_bg {
+  height: 45vh;
+  width: 100%;
+  filter: blur(20rpx);
+}
+.uxer_info_wrap .user_img_wrap .user_info {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 15%;
+  text-align: center;
+}
+.uxer_info_wrap .user_img_wrap .user_info .user_icon {
+  height: 150rpx;
+  width: 150rpx;
+  border-radius: 50%;
+}
+.uxer_info_wrap .user_img_wrap .user_info .user_name {
+  color: #fff;
+  margin-top: 20rpx;
+  font-size: 40rpx;
+}
+.uxer_info_wrap .user_btn {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 15%;
+  color: #2EC5B6;
+  font-size: 38rpx;
+  padding: 30rpx;
+}
+.user_content {
+  position: relative;
+}
+.user_content .user_main {
+  position: absolute;
+  width: 90%;
+  left: 50%;
+  transform: translateX(-50%);
+  top: -40rpx;
+}
+.user_content .user_main .history {
+  background-color: #fff;
+  display: flex;
+}
+.user_content .user_main .history navigator {
+  flex: 1;
+  text-align: center;
+  padding: 20rpx 0;
+}
+.user_content .user_main .history navigator .his_name {
+  color: #787878;
+}
+.body_info {
+  margin: 120rpx 20rpx 0 20rpx;
+  background-color: #fff;
+  padding: 20rpx 0;
+}
+.body_info .tobody_info button {
+  width: 90%;
+  background-color: #f0f3f8;
+  border-radius: 20rpx;
+  border: 0;
+}
+.app_info {
+  margin: 40rpx 20rpx;
+  background-color: #fff;
+  padding: 20rpx;
+}
+.app_info .app_info_item {
+  padding: 10rpx;
+}
+.app_info .app_info_item button {
+  width: 100%;
+  background-color: #f0f3f8;
+  border-radius: 20rpx;
+  border: 0;
+}
+.logout {
+  margin: 0 20rpx;
+  padding: 20rpx 0;
+}
+.logout .btn {
+  color: #fff;
+  width: 90%;
+  background-color: #fb522e;
+  border-radius: 20rpx;
+  border: 0;
+}

@@ -1,0 +1,9 @@
+<view class="box" url="">
+  <button wx:if="{{dailysign}}"class="btn" bindtap="dailysi"></button>
+  <button wx:else class="btn" bindtap="finish"></button>
+
+  <image wx:if="{{dailysign}}" class="pic" src="{{imgsrc}}"></image>
+  <image wx:else class="pic" src="{{Fimgsrc}}" ></image>
+
+  <view class="text" >{{boxtext}}</view>
+</view>

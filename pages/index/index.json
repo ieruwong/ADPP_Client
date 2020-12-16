@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "PageHeader":"/components/PageHeader/PageHeader",
+    "DailyBox":"/components/DailyBox/DailyBox"
+  }
+}

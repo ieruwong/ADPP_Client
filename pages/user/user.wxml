@@ -1,0 +1,59 @@
+<!-- 用户头像及背景 -->
+<view class="uxer_info_wrap">
+  <view wx:if="{{userinfo.avatarUrl}}" class="user_img_wrap">
+    <image class="user_bg" src="{{userinfo.avatarUrl}}"></image>
+    <view class="user_info">
+      <image class="user_icon" src="{{userinfo.avatarUrl}}"></image>
+      <view class="user_name">{{userinfo.nickName}}</view>
+    </view>
+  </view>
+  <view wx:else class="user_btn">
+	  <button plain="true" open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo">登录</button>
+  </view>
+</view>
+
+
+<!-- 使用历史 -->
+<view class="user_content">
+	<view class="user_main">
+		<!-- 历史浏览 -->
+		<view class="history">
+			<navigator>
+				<view class="his_num">0</view>
+				<view class="his_name">消息提醒</view>
+			</navigator>
+			<navigator>
+				<view class="his_num">0</view>
+				<view class="his_name">我的收藏</view>
+			</navigator>
+			<navigator>
+				<view class="his_num">0</view>
+				<view class="his_name">浏览历史</view>
+			</navigator>
+		</view>
+	</view>
+</view>
+
+<!-- 信息录入 -->
+<view class="body_info">
+	<view class="tobody_info">
+		<button bindtap="infoentry" plain="true">录入身体信息</button>
+	</view>
+</view>
+
+<!-- 其它 -->
+<view class="app_info">
+	<view class="app_info_item">
+		<button open-type="feedback" plain="true">意见反馈</button>
+	</view>
+	<view class="app_info_item">
+		<button open-type="contact" plain="true">联系我们</button>
+	</view>
+	<view class="app_info_item">
+		<button open-type="share" plain="true">应用分享</button>
+	</view>
+</view>
+<!-- 注销 -->
+<view class="logout" wx:if="{{userinfo.avatarUrl}}">
+	<button bindtap="logout" plain="true"  class="btn">退出登录</button>
+</view>

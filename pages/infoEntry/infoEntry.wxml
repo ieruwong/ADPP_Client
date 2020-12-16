@@ -1,0 +1,58 @@
+<form bindsubmit="formSubmit">
+
+  <view class="section">
+    <view class="section__title">选择出生日期</view>
+    <picker mode="date" value="{{date}}" start="1880-01-01" end="{{now}}" bindchange="bindAgeChange" name="date">
+      <view class="section_picker">  {{date}}  </view>
+    </picker>
+  </view>
+
+  <view class="section">
+    <view class="section__title">性别</view>
+    <radio-group name="gender" >
+      <label class="theradio"><radio value="man"/>男</label>
+      <label class="theradio"><radio value="woman" />女</label>
+    </radio-group>
+  </view>
+
+  <view class="section">
+    <view class="section__title">身高（cm）</view>
+      <view  style="margin: 30rpx 0">
+        <input type="number" name="height" maxlength="3" placeholder="{{height}}" />
+      </view>
+  </view>
+
+  <view class="section">
+    <view class="section__title">体重（kg）</view>
+      <view  style="margin: 30rpx 0">
+        <input type="digit" name="weight" maxlength="4" placeholder="{{weight}}" />
+      </view>
+  </view>
+
+  <view class="section">
+    <view class="section__title">是否患有高血压</view>
+    <radio-group name="hypertension" >
+      <label class="theradio"><radio value="true" />是</label>
+      <label class="theradio"><radio value="false" />否</label>
+    </radio-group>
+  </view>
+
+  <view class="section">
+    <view class="section__title">是否患有糖尿病</view>
+    <radio-group name="diabetes">
+      <label class="theradio"><radio value="true" />是</label>
+      <label class="theradio"><radio value="false"/>否</label>
+    </radio-group>
+  </view>
+
+  <view class="section">
+    <view class="page-section-title">若有其它疾病请在下框中输入</view>
+        <view  style="margin: 30rpx 0" >
+          <input  name="otherdisease" placeholder="{{otherdisease==null?'没有则无需输入':otherdisease }}"/>
+        </view>
+  </view>
+
+  <view class="btn-area">
+    <button class="btn" formType="submit">录入身体信息</button>
+  </view>
+</form>
