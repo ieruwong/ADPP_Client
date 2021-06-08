@@ -35,5 +35,8 @@ App({
   },
   globalData: {
     userInfo: null
+  },
+  data:{
+    servsers:"http://localhost:8080/TestWeb/SQLGet"   
   }
 })

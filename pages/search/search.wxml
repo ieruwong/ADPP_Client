@@ -1,5 +1,6 @@
 <view class="search_row">
   <input placeholder="请输入搜索内容"></input>
-  <button class="btn">搜索</button>
-</view>
+  <button class="btn" bindtap='bindViewTap'>搜索</button>
 
+  <!--<button class="btn" bindtap='bindtest'>搜索</button>   -->
+</view>

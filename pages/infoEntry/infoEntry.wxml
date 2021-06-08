@@ -2,7 +2,7 @@
 
   <view class="section">
     <view class="section__title">选择出生日期</view>
-    <picker mode="date" value="{{date}}" start="1880-01-01" end="{{now}}" bindchange="bindAgeChange" name="date">
+    <picker mode="date" value="{{date}}" start="1960-01-01" end="{{now}}" bindchange="bindAgeChange" name="date">
       <view class="section_picker">  {{date}}  </view>
     </picker>
   </view>
@@ -18,14 +18,14 @@
   <view class="section">
     <view class="section__title">身高（cm）</view>
       <view  style="margin: 30rpx 0">
-        <input type="number" name="height" maxlength="3" placeholder="{{height}}" />
+        <input type="number" name="height" maxlength="3" placeholder="{{height}}" bindinput="heightInput"/>
       </view>
   </view>
 
   <view class="section">
     <view class="section__title">体重（kg）</view>
       <view  style="margin: 30rpx 0">
-        <input type="digit" name="weight" maxlength="4" placeholder="{{weight}}" />
+        <input type="digit" name="weight" maxlength="4" placeholder="{{weight}}"  bindinput="weightInput"/>
       </view>
   </view>
 

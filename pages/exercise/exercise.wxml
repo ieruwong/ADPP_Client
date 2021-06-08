@@ -1,0 +1,4 @@
+<!--pages/exercise/exercise.wxml-->
+<view>
+  <button bindtap='bindtest'>test</button>
+  </view>

@@ -1,0 +1,16 @@
+<view class="section">
+
+    <view class="title">{{news.title}}</view>
+    <view class="title">title</view>
+
+
+    <view class="author-box">
+        <text class="author">{{news.author}}</text>
+        <text class="time">{{news.time}}</text>
+
+
+    </view>
+    <text class="details">{{news.details}}</text>
+
+    
+</view>

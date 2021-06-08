@@ -4,7 +4,7 @@
     "ignore": []
   },
   "setting": {
-    "urlCheck": true,
+    "urlCheck": false,
     "es6": true,
     "enhance": false,
     "postcss": true,
@@ -21,7 +21,7 @@
     "checkSiteMap": true,
     "uploadWithSourceMap": true,
     "compileHotReLoad": false,
-    "useMultiFrameRuntime": false,
+    "useMultiFrameRuntime": true,
     "useApiHook": true,
     "babelSetting": {
       "ignore": [],
@@ -34,12 +34,13 @@
     "userConfirmedUseCompilerModuleSwitch": false,
     "packNpmManually": false,
     "packNpmRelationList": [],
-    "minifyWXSS": true
+    "minifyWXSS": true,
+    "useApiHostProcess": true
   },
   "compileType": "miniprogram",
-  "libVersion": "2.14.0",
+  "libVersion": "2.17.0",
   "appid": "wxacc8ea99033a78b4",
-  "projectname": "Test0",
+  "projectname": "ADPP",
   "debugOptions": {
     "hidedInDevtools": []
   },
@@ -81,6 +82,23 @@
           "name": "信息录入",
           "pathName": "pages/infoEntry/infoEntry",
           "query": "",
+          "scene": null
+        },
+        {
+          "name": "锻炼",
+          "pathName": "pages/exercise/exercise",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "阅读",
+          "pathName": "pages/detail/detail",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "阅读2",
+          "pathName": "pages/detail/datails/datails",
           "scene": null
         }
       ]

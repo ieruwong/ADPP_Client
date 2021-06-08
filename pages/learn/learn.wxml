@@ -1,28 +1,55 @@
-<Tabs tabs="{{tabs}}" binditemChange="handleItemChange">
+<mp-tabs 
+  tabs="{{tabs}}" 
+  activeTab="{{activeTab}}" 
+  swiperClass="weui-tabs-swiper"
+  bindtabclick="onTabCLick"
+  bindchange="onChange"
+  activeClass="tab-bar-title__selected"
+>
+  <block  wx:key="title">
+<!-- 阅读 -->
 
-  <!-- 阅读 -->
-  <block wx:if="{{tabs[0].isActive}}">
-    <view class="read">
-      <navigator class="book" wx:for="{{8}}" wx:key="key">
-        <view class="pic"><image mode="widthFix" src="/images/books/book0.png"></image></view>
+  <view class="read " slot="tab-content-0">
+      <view class="book" wx:for="{{5}}" wx:key="key" bindtap='viewDetails' data-id='{{6}}' >
+        <view class="pic"><image mode="aspectFill" src="/images/books/book0.png"></image></view>
         <view class="txt">
           <view class="title">《ADC阿尔茨海默症防治指导手册》</view>
-          <view class="newsinfo"><text space="ensp">来源：ADC - 时间：2020-08-17</text></view>
+          <view class="newsinfo"><text space="ensp"> 时间：2020-08-17</text></view>
         </view>
-      </navigator>
-    </view>
-  </block>
-  <!-- 新闻 -->
-  <block wx:else="{{tabs[1].isActive}}">
-    <view class="read">
-      <navigator class="book" wx:for="{{8}}" wx:key="key">
-        <view class="pic"><image mode="widthFix" src="/images/news/file.png"></image></view>
+      </view>      
+    </view>  
+    
+    
+<!-- 新闻 -->
+    <view class="read" slot="tab-content-1">
+      <view class="book" wx:for="{{news}}" wx:key="key" bindtap='viewDetails'  data-id='{{item.id}}'>
+        <view class="pic"><image mode="aspectFill" src="{{item.cover}}"></image></view>
         <view class="txt">
-          <view class="title">《从容面对 不再回避》2020世界阿尔茨海默病月主题发布</view>
-          <view class="newsinfo"><text space="ensp">来源：ADC - 时间：2020-01-13</text></view>
+          <view class="title">{{item.title}}</view>
+          <view class="newsinfo"><text space="ensp">时间：{{item.time}} </text></view>
         </view>
-      </navigator>
+      </view>
     </view>
-  </block>
+   
 
-</Tabs>
+<!-- 其他 -->
+    
+
+    <scroll-view  slot="tab-content-2" scroll-y style="width: 100%; height:100vh!important;">
+      <view class="read" >
+      <view class="book" wx:for="{{APInews}}" wx:key="key"  wx:for-index="index" data-index="{{index}}" bindtap='viewDetail'   data-id='{{6}}'>
+        <view class="pic"><image mode="aspectFill" src="{{item.thumbnail_pic_s}}"></image></view>
+        <view class="txt">
+          <view class="title">{{item.title}}</view>
+          <view class="newsinfo"><text space="ensp"> 时间：{{item.date}}</text></view>
+        </view>
+      </view>
+    </view>
+    </scroll-view>
+    
+    <!-- <view class="tab-content" slot="tab-content-2" >相关视频</view> --> 
+    
+
+  </block>
+</mp-tabs>
+

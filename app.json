@@ -5,7 +5,10 @@
     "pages/learn/learn",
     "pages/user/user",
     "pages/search/search",
-    "pages/infoEntry/infoEntry"
+    "pages/infoEntry/infoEntry",
+    "pages/exercise/exercise",
+    "pages/detail/detail",
+    "pages/detail/datails/datails"
   ],
   "window": {
     "backgroundTextStyle": "light",

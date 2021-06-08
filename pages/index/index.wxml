@@ -3,9 +3,9 @@
 <view class="banner">
       <!--circular:无缝衔；     autoplay：自动轮播；      interval：设置间隔 -->
   <swiper indicator-dots indicator-color="rgeb(255,255,255,0.5)" indicator-active-color="#fff" circular autoplay interval="4000">
-    <swiper-item><image src="/images/swiper/banner1.jpg" bindtap="bindViewTapA"/></swiper-item>
-    <swiper-item><image src="/images/swiper/banner1.jpg" bindtap="bindViewTapB"/></swiper-item>
-    <swiper-item><image src="/images/swiper/banner1.jpg" bindtap="bindViewTapB"/></swiper-item>
+    <swiper-item><image mode="aspectFill" src="/images/swiper/banner0.jpg" bindtap="bindViewTapA"/></swiper-item>
+    <swiper-item><image mode="aspectFill" src="/images/swiper/banner0.jpg" bindtap="bindViewTapB"/></swiper-item>
+    <swiper-item><image mode="aspectFill" src="/images/swiper/banner0.jpg" bindtap="bindViewTapC"/></swiper-item>
   </swiper>
 </view>
 
@@ -23,8 +23,8 @@
   <view class="container">
 
     <view class="pubTitle">
-      <view class="text">运动</view>
-      <navigator class="more">详情>>></navigator>
+      <view class="text">锻炼</view>
+      <navigator class="more" url="/pages/exercise/exercise">详情>>></navigator>
     </view>
     
     <view class="body">
@@ -33,7 +33,7 @@
         
         <image class="pic" src="/images/health/health1.jpg"/>
         <view class="top">
-          <view class="title">运动记录</view>
+          <view class="title">锻炼记录</view>
           <view class="line"></view>
           <view class="dec">function A</view>
         </view>

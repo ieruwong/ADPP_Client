@@ -1,85 +1,91 @@
-// pages/learn/learn.js
+var jsonData = require('../../data/json');
+var util = require('../../utils/util.js');
+const appKey = 'fc35d7872c25744ab4669c7d9dbcf15e'
+const newsType = 'shehui'
 Page({
-
-  /**
-   * 页面的初始数据
-   */
   data: {
-    tabs:[
-      {
-        id:0,
-        name:"首页",
-        isActive:true
-      },
-      {
-        id:1,
-        name:"阅读",
-        isActive:false
-      },
-    ]
-  },
-  handleItemChange(e){
-    const {index}=e.detail;
-    let {tabs}=this.data;
-    tabs.forEach((v,i)=>i===index?v.isActive=true:v.isActive=false);
-    this.setData({
-      tabs
-    })
+    tabs: [],
+    activeTab: 0,
+    userInfo: {},
+    APInews:{}
   },
 
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad: function (options) {
+//跳转到详情页面
+viewDetails: function(e) {
+  var id=e.currentTarget.dataset.id
+  wx.navigateTo({
+    url: '../detail/detail?id='+id
+  })
+},
+//api跳转
+viewDetail: function(e) {
+  var id=e.currentTarget.dataset.index
+  wx.navigateTo({
+    url: '../detail/datails/datails?id='+id
+  })
+},
 
+//页面加载
+  onLoad:function() {
+    const titles = ['阅读', '新闻', '其它']
+    const tabs = titles.map(item => ({title: item}))
+    this.setData({tabs})
+
+    var that=this;
+    //本地
+    util.getAllData(function(news){
+          that.setData({
+                news:that.detDateFormat(news)
+          });
+      });
+
+    //API
+      wx.request({
+        url: 'http://v.juhe.cn/toutiao/index',
+        //url: `https://v.juhe.cn/toutiao/index?type=${newsType}&key=${appKey}`,
+        data: {
+         type: '' ,
+         key:'4b72107de3a197b3bafd9adacf685790'
+        },
+        header: {
+            'Content-Type': 'application/json'
+        },
+        success: function(res) {
+
+          that.setData({
+            APInews:res.data.result.data
+          })
+          wx.setStorageSync('news', that.data.APInews)          
+        }
+      })
+    },
+
+    detDateFormat:function(news){
+      var len=news.length,item;
+      for(var i=0;i<len;i++){
+          item=news[i];
+          item.time=new Date(item.time*1000).format('yyyy-MM-dd hh:mm');
+      }
+      return news;
   },
 
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-
+  onTabCLick(e) {
+    const index = e.detail.index
+    this.setData({activeTab: index})
   },
 
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-
+  onChange(e) {
+    const index = e.detail.index
+    this.setData({activeTab: index})
   },
 
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-
-  },
-
-  /**
+   /**
    * 页面上拉触底事件的处理函数
    */
   onReachBottom: function () {
-
+   
   },
 
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
 
-  }
+
 })

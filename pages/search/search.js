@@ -1,18 +1,63 @@
 // pages/search/search.js
+var app = getApp()
 Page({
   /**
    * 页面的初始数据
    */
   data: {
-
+    userInfo: {}
   },
 
+  bindViewTap: function() {
+    wx.navigateTo({
+      url: '../logs/logs'
+    })
+  },
+
+  bindtest: function(){
+    wx.request({
+      url: 'http://localhost:8080/TestWeb/SQLGet',
+      data:{
+        userid:'003',
+        password:'abc',
+      },
+      method:'GET',
+      header: {
+        'content-type': 'application/json' 
+      },
+      success:function(res){
+        console.log(res);
+     
+      },
+      fail:function(res){
+        console.log(".....fail.....");
+      }
+    })
+  },
+
+  
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function (options) {
-
-  },
+  onLoad: function () {
+    // 访问聚合数据的网络接口
+    wx.request({
+      url: 'http://v.juhe.cn/toutiao/index',
+      data: {
+       type: '' ,
+       key: '482e213ca7520ff1a8ccbb262c90320a'
+      },
+      header: {
+          'Content-Type': 'application/json'
+      },
+      success: function(res) {
+        console.log(res.data)
+      }
+    })
+  
+      console.log('onLoad')
+   
+    },
 
   /**
    * 生命周期函数--监听页面初次渲染完成
